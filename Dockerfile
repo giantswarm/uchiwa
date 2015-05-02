@@ -2,8 +2,8 @@ FROM busybox:latest
 
 
 ADD https://github.com/upfluence/etcdenv/releases/download/v0.1.2/etcdenv-linux-amd64-0.1.2 /usr/bin/etcdenv
-ADD https://github.com/upfluence/uchiwa/releases/download/v0.8.1/uchiwa-linux-amd64 /uchiwa
-ADD https://github.com/upfluence/uchiwa/releases/download/v0.8.1/public.zip /public.zip
+ADD https://github.com/upfluence/uchiwa/releases/download/v0.8.2/uchiwa-linux-amd64 /uchiwa
+ADD https://github.com/upfluence/uchiwa/releases/download/v0.8.2/public.zip /public.zip
 
 RUN chmod +x /usr/bin/etcdenv
 RUN chmod +x /uchiwa
