@@ -9,10 +9,10 @@ GOOS=darwin CGO_ENABLED=0 GOARCH=amd64 go build -o uchiwa-darwin-amd64 .
 
 npm install --production
 
-tar -zcvf public.tar public/
+zip -r public.zip public/
 
 hub release create -a uchiwa-linux-amd64 -a uchiwa-darwin-amd64 \
-  -a public.tar  v$version
+  -a public.zip  v$version
 
 rm uchiwa-*
-rm public.tar
+rm public.zip
