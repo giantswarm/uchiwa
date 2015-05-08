@@ -13,5 +13,6 @@ EXPOSE 3000
 
 ENV UCHIWA_PORT 3000
 ENV SENSU_NAMESPACE /environments/sensu
+ENV FLEET_IP localhost
 
-CMD  etcdenv -n $SENSU_NAMESPACE -s http://172.17.42.1:4001 /uchiwa -p /public
+CMD  etcdenv -n $SENSU_NAMESPACE -s http://${FLEET_IP}:4001 /uchiwa -p /public
